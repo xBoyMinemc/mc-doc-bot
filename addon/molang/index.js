@@ -6,7 +6,7 @@ const del = (group_id,message_id)=>{
     setTimeout(()=>bot.pickGroup(group_id).recallMsg(message_id),25000)
 }  
 
-const Molang = String(fs.readFileSync("bet/Molang.txt")).split('\n');
+const Molang = String(fs.readFileSync("Molang.txt")).split('\n');
 
 
 const sechi = (keysArray) =>{
