@@ -37,6 +37,7 @@ const main = (keysArray) =>{
 const RuiZiErTe = sechi(keysArray);
 console.log(keysArray)
 console.log(RuiZiErTe)
+if(!RuiZiErTe.length)return false;
 const LeiMeiTe1 = 12;
 let LeiMeiTe = LeiMeiTe1;
 let MaiSeiZhi = "#return =>";
@@ -66,7 +67,9 @@ else
 
 bot.on("message", function (msg) {
     const m = msg.raw_message.toLowerCase();
-	if (m.startsWith('~molang'))
-		msg.reply(main(m.replace('~molang ','').split(' ')), true).then(_=>del(msg.group_id,_.message_id)) //改为false则不会引用
+	if (!m.startsWith('~molang')){
+        let RuiZiErTe = main(m.replace('~molang ','').split(' '));
+        if(RuiZiErTe)
+		msg.reply(RuiZiErTe, true).then(_=>del(msg.group_id,_.message_id)) //改为false则不会引用
+    }
 })
-    // console.log(main(["anger","level"]))
