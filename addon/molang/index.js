@@ -66,7 +66,7 @@ else
 
 bot.on("message", function (msg) {
     const m = msg.raw_message.toLowerCase();
-	if (!m.startsWith('~molang')){
+	if (m.startsWith('~molang')){
         let RuiZiErTe = main(m.replace('~molang ','').split(' '));
         if(RuiZiErTe)
 		    msg.reply(RuiZiErTe, true).then(_=>del(msg.group_id,_.message_id)) //改为false则不会引用
