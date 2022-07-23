@@ -64,12 +64,13 @@ else
 }
 
 
-
 bot.on("message", function (msg) {
     const m = msg.raw_message.toLowerCase();
 	if (!m.startsWith('~molang')){
         let RuiZiErTe = main(m.replace('~molang ','').split(' '));
         if(RuiZiErTe)
-		msg.reply(RuiZiErTe, true).then(_=>del(msg.group_id,_.message_id)) //改为false则不会引用
+		    msg.reply(RuiZiErTe, true).then(_=>del(msg.group_id,_.message_id)) //改为false则不会引用
+        else
+            msg.reply("无结果\n[25s后撤回]", true).then(_=>del(msg.group_id,_.message_id)) 
     }
 })
