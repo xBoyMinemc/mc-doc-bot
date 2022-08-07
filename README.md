@@ -17,3 +17,13 @@
 [5分钟上手TypeScript](https://www.tslang.cn/docs/handbook/typescript-in-5-minutes.html)  
 [优秀npm三方库集合](https://github.com/sindresorhus/awesome-nodejs)  
 
+
+----  
+  
+----  
+|示例|内容|
+|-|-|
+|~profanity + 内容|过滤国际版Minecraft屏蔽词|
+|~entity + 组件名或list|官方实体组件api文档|
+|~item + 组件名或list|官方物品组件api文档|
+|~molang + 组件名或list|官方molang组件api文档|
