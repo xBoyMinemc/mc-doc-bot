@@ -3,7 +3,7 @@ const { bot } = require("./index")
 
 let messageBox = []
 
-const 指定的群 = 957577232
+const 指定的群 = 12345678
 
 bot.on("message", function (msg) {
 
