@@ -40,10 +40,10 @@ bot.on("message", function (msg) {
         if(m==='list')
             RuiZiErTe = Array.from(Item.keys()).join('\n');
         else
-            RuiZiErTe = Array.from(Item.keys()).includes(m)?Item.get(m):0;
+            RuiZiErTe = Array.from(Item.keys()).includes(m)?Item.get(m).join(''):0;
 
         if(RuiZiErTe)
-		    msg.reply("##minecraft:"+RuiZiErTe.join(''), true).then(_=>del(msg.group_id,_.message_id,60000)) //改为false则不会引用
+		    msg.reply("##minecraft:"+RuiZiErTe, true).then(_=>del(msg.group_id,_.message_id,60000)) //改为false则不会引用
         else
             msg.reply("无结果\n[2.5s后撤回]", true).then(_=>del(msg.group_id,_.message_id,3000)) 
     }
